@@ -1,0 +1,190 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.DesafioFirebase" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/salmon</item>
+        <item name="colorPrimaryVariant">@color/dark_green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/green</item>
+        <item name="colorSecondaryVariant">@color/blue</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:navigationBarColor">@color/medium_black</item>
+        <item name="colorOnSurface">@color/dark_salmon</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
+    </style>
+
+    <style name="LayoutDefault">
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="android:backgroundTintMode">screen</item>
+        <item name="android:background">@drawable/bg_layout</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="ThemeOverlay.App.MaterialAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorOnSurface">@color/medium_black</item>
+    </style>
+
+    <style name="LoginCard" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_margin">@dimen/margin_half</item>
+        <item name="shapeAppearance">@style/LoginCardShape</item>
+    </style>
+
+    <style name="LoginCardShape">
+        <item name="android:background">@color/white</item>
+        <item name="cornerSize">@dimen/login_card_corners_radius</item>
+    </style>
+
+    <style name="LoginCardBody">
+        <item name="android:paddingBottom">@dimen/margin_quarter</item>
+        <item name="android:paddingEnd">@dimen/margin_default</item>
+        <item name="android:paddingStart">@dimen/margin_default</item>
+        <item name="android:paddingTop">@dimen/margin_default</item>
+    </style>
+
+    <style name="TextInputLayoutDefault">
+        <item name="boxStrokeColor">@color/text_input_stroke</item>
+        <item name="android:textColorHint">@color/gray</item>
+    </style>
+
+    <style name="EditTextDefault">
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="CheckboxDefault">
+        <item name="buttonTint">@color/salmon</item>
+    </style>
+
+    <style name="TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:textSize">@dimen/login_card_text_button_font_size</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="ButtonBack" parent="Widget.MaterialComponents.Button.TextButton.Icon">
+        <item name="android:minWidth">0dp</item>
+        <item name="android:layout_marginStart">@dimen/margin_half</item>
+        <item name="android:layout_marginTop">@dimen/margin_default</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="icon">@drawable/ic_baseline_arrow_back_24</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+
+    <style name="TextInputLayoutSearch" parent="TextInputLayoutDefault">
+        <item name="boxStrokeColor">@color/text_input_search_stroke</item>
+        <item name="android:layout_marginEnd">@dimen/margin_half</item>
+        <item name="android:layout_marginStart">@dimen/margin_half</item>
+        <item name="android:layout_marginTop">@dimen/margin_half</item>
+        <item name="startIconDrawable">@drawable/ic_baseline_search_24</item>
+        <item name="startIconTint">@color/gray</item>
+        <item name="endIconDrawable">@drawable/ic_baseline_mic_24</item>
+        <item name="endIconTint">@color/gray</item>
+        <item name="endIconMode">custom</item>
+    </style>
+
+    <style name="EditTextSearch">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="GamesListCard" parent="Widget.MaterialComponents.CardView">
+        <item name="android:layout_margin">@dimen/margin_half</item>
+        <item name="shapeAppearance">@style/GamesListCardShape</item>
+    </style>
+
+    <style name="GamesListCardShape">
+        <item name="android:background">@color/white</item>
+        <item name="cornerSize">@dimen/games_item_card_corners_radius</item>
+    </style>
+
+    <style name="GamesListCardBody">
+        <item name="android:paddingBottom">@dimen/margin_half</item>
+    </style>
+
+    <style name="GamesListName">
+        <item name="android:layout_marginEnd">@dimen/margin_half</item>
+        <item name="android:layout_marginStart">@dimen/margin_half</item>
+        <item name="android:layout_marginTop">@dimen/margin_half</item>
+        <item name="android:textColor">@color/medium_black</item>
+        <item name="android:textSize">@dimen/games_item_name_size</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="GamesListYear">
+        <item name="android:layout_marginEnd">@dimen/margin_half</item>
+        <item name="android:layout_marginStart">@dimen/margin_half</item>
+        <item name="android:textSize">@dimen/games_item_year_size</item>
+    </style>
+
+    <style name="FabAdd">
+        <item name="android:layout_margin">@dimen/margin_default</item>
+        <item name="srcCompat">@drawable/ic_baseline_add_24</item>
+        <item name="android:backgroundTint">@color/salmon</item>
+        <item name="tint">@color/white</item>
+    </style>
+
+    <style name="GamesRegisterCard" parent="LoginCard" />
+
+    <style name="GamesRegisterCardBody" parent="LoginCardBody">
+        <item name="android:layout_marginTop">@dimen/margin_double</item>
+    </style>
+
+    <style name="GamesRegisterImage">
+        <item name="android:background">@drawable/games_register_img_bg</item>
+        <item name="android:padding">@dimen/games_register_image_stroke_width</item>
+        <item name="android:src">@drawable/img_camera</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:elevation">2dp</item>
+    </style>
+
+    <style name="GameDetailsImageName">
+        <item name="android:layout_marginBottom">@dimen/margin_default</item>
+        <item name="android:layout_marginEnd">@dimen/margin_triple</item>
+        <item name="android:layout_marginStart">@dimen/margin_default</item>
+        <item name="android:textSize">@dimen/games_details_image_name_size</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="GameDetailsEditButton" parent="Widget.MaterialComponents.Button.Icon">
+        <item name="android:minWidth">0dp</item>
+        <item name="paddingEnd">0dp</item>
+        <item name="paddingStart">0dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_margin">@dimen/margin_default</item>
+        <item name="icon">@drawable/ic_outline_edit_24</item>
+        <item name="iconGravity">textEnd</item>
+        <item name="android:background">@drawable/bg_edit_btn</item>
+    </style>
+
+    <style name="GameDetailsName">
+        <item name="android:layout_marginTop">@dimen/margin_default</item>
+        <item name="android:layout_marginEnd">@dimen/margin_default</item>
+        <item name="android:layout_marginStart">@dimen/margin_default</item>
+        <item name="android:textSize">@dimen/games_details_name_size</item>
+        <item name="android:textColor">@color/medium_black</item>
+    </style>
+
+    <style name="GameDetailsYear">
+        <item name="android:layout_marginEnd">@dimen/margin_default</item>
+        <item name="android:layout_marginStart">@dimen/margin_default</item>
+        <item name="android:textSize">@dimen/games_details_year_size</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="GameDetailsDescription">
+        <item name="android:layout_marginTop">@dimen/margin_default</item>
+        <item name="android:layout_marginEnd">@dimen/margin_default</item>
+        <item name="android:layout_marginStart">@dimen/margin_default</item>
+        <item name="android:textSize">@dimen/games_details_description_size</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+</resources>

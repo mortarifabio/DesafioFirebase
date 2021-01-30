@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_quarter">4dp</dimen>
+    <dimen name="margin_half">8dp</dimen>
+    <dimen name="margin_default">16dp</dimen>
+    <dimen name="margin_default_quarter">20dp</dimen>
+    <dimen name="margin_double">32dp</dimen>
+    <dimen name="margin_triple">48dp</dimen>
+
+    <dimen name="login_card_corners_radius">10dp</dimen>
+    <dimen name="login_card_text_button_font_size">18sp</dimen>
+
+    <dimen name="games_item_card_corners_radius">8dp</dimen>
+    <dimen name="games_item_img_height">120dp</dimen>
+    <dimen name="games_item_img_width">200dp</dimen>
+    <dimen name="games_item_name_size">18sp</dimen>
+    <dimen name="games_item_year_size">16sp</dimen>
+
+    <dimen name="games_register_multiline_min_height">150dp</dimen>
+    <dimen name="games_register_image_size">110dp</dimen>
+    <dimen name="games_register_image_camera_size">100dp</dimen>
+    <dimen name="games_register_image_stroke_width">3dp</dimen>
+
+    <dimen name="games_details_image_min_height">250dp</dimen>
+    <dimen name="games_details_image_name_size">26sp</dimen>
+    <dimen name="games_details_edit_btn_size">60dp</dimen>
+    <dimen name="games_details_name_size">18sp</dimen>
+    <dimen name="games_details_year_size">14sp</dimen>
+    <dimen name="games_details_description_size">16sp</dimen>
+
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/salmon" />
+            <size
+                android:width="@dimen/games_register_image_camera_size"
+                android:height="@dimen/games_register_image_camera_size" />
+        </shape>
+    </item>
+    <item
+        android:drawable="@drawable/ic_baseline_photo_camera_24"
+        android:gravity="center" />
+</layer-list>

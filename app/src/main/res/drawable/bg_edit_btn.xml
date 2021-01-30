@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/salmon" />
+    <corners android:radius="35dp" />
+    <size
+        android:width="@dimen/games_details_edit_btn_size"
+        android:height="@dimen/games_details_edit_btn_size" />
+</shape>
