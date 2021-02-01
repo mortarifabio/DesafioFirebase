@@ -12,7 +12,7 @@ class Constants {
         const val ANALYTICS_AUTOMATIC_LOGIN_EVENT = "automatic_login"
         const val ANALYTICS_CREATE_ACCOUNT_EVENT = "user_create_account"
         const val ANALYTICS_REGISTER_USER_EVENT = "user_register"
-        const val ANALYTICS_REGISTER_GAME_EVENT = "game_register"
+        const val ANALYTICS_ADD_GAME_EVENT = "game_add"
         const val ANALYTICS_UPDATE_GAME_EVENT = "game_update"
         const val ANALYTICS_GAME_DETAILS_EVENT = "game_details"
     }

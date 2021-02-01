@@ -78,21 +78,25 @@
         <item name="iconTint">@color/white</item>
     </style>
 
-    <style name="TextInputLayoutSearch" parent="TextInputLayoutDefault">
+    <style name="GamesListTextInputLayoutSearch" parent="TextInputLayoutDefault">
         <item name="boxStrokeColor">@color/text_input_search_stroke</item>
         <item name="android:layout_marginEnd">@dimen/margin_half</item>
         <item name="android:layout_marginStart">@dimen/margin_half</item>
         <item name="android:layout_marginTop">@dimen/margin_half</item>
         <item name="startIconDrawable">@drawable/ic_baseline_search_24</item>
         <item name="startIconTint">@color/gray</item>
-        <item name="endIconDrawable">@drawable/ic_baseline_mic_24</item>
-        <item name="endIconTint">@color/gray</item>
-        <item name="endIconMode">custom</item>
     </style>
 
-    <style name="EditTextSearch">
+    <style name="GamesListEditTextSearch">
         <item name="android:background">@color/white</item>
         <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="GamesListListenButton">
+        <item name="android:src">@drawable/ic_baseline_mic_24</item>
+        <item name="android:background">#0FFF</item>
+        <item name="android:layout_marginEnd">@dimen/margin_quarter</item>
+        <item name="android:padding">@dimen/margin_half</item>
     </style>
 
     <style name="GamesListCard" parent="Widget.MaterialComponents.CardView">

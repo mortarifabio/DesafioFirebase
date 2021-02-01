@@ -6,8 +6,6 @@
     <string name="log_in">LOG IN</string>
     <string name="create_account">Create account</string>
     <string name="name">Name</string>
-    <string name="save">Save</string>
-    <string name="register">Register</string>
     <string name="close">Close</string>
     <string name="msg_invalid_email">Invalid email address</string>
     <string name="field_required">%1$s is required</string>
@@ -18,16 +16,19 @@
     <string name="email_already_registered">Email address already registered</string>
     <string name="authentication_failed">Password invalid or user is not registered</string>
     <string name="back">Back</string>
-    <string name="please_log_in">Please log in</string>
     <string name="search_games">Search Games</string>
     <string name="game_image">Game Image</string>
     <string name="add_game">Add Game</string>
     <string name="created_at">Created At</string>
     <string name="save_game">Save Game</string>
     <string name="description">Description</string>
-    <string name="date_mask">##/##/####</string>
     <string name="error_saving_game">Error saving game</string>
     <string name="user_not_logged_in">User not logged in</string>
     <string name="release">Release:</string>
     <string name="get_image_from">Get image from</string>
+    <string name="voice_recognition_disabled">Search with voice recognition is disabled</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="listening">Listening…</string>
+    <string name="speech_to_text">Speech to text</string>
 </resources>

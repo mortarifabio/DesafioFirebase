@@ -9,12 +9,13 @@
     tools:context=".games.view.GamesListActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clGamesList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tilGamesListSearch"
-            style="@style/TextInputLayoutSearch"
+            style="@style/GamesListTextInputLayoutSearch"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="@string/search_games"
@@ -26,12 +27,24 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/tietGamesListSearch"
-                style="@style/EditTextSearch"
+                style="@style/GamesListEditTextSearch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="textEmailAddress" />
 
         </com.google.android.material.textfield.TextInputLayout>
+
+        <com.mortarifabio.desafiofirebase.games.view.ListenImageButton
+            android:id="@+id/ibGamesListListen"
+            style="@style/GamesListListenButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/speech_to_text"
+            app:layout_constraintBottom_toBottomOf="@id/tilGamesListSearch"
+            app:layout_constraintEnd_toEndOf="@id/tilGamesListSearch"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="@id/tilGamesListSearch"
+            app:layout_constraintTop_toTopOf="@id/tilGamesListSearch" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvGamesList"
@@ -53,12 +66,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/add_game"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_bias="1"
-            app:layout_constraintHorizontal_bias="1"/>
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

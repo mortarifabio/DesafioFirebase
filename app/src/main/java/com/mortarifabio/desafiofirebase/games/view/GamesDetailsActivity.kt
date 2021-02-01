@@ -4,11 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.bumptech.glide.Glide
+import com.google.firebase.analytics.ktx.analytics
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
 import com.mortarifabio.desafiofirebase.R
 import com.mortarifabio.desafiofirebase.databinding.ActivityGamesDetailsBinding
 import com.mortarifabio.desafiofirebase.model.Game
+import com.mortarifabio.desafiofirebase.utils.Constants.Analytics.ANALYTICS_UPDATE_GAME_EVENT
 import com.mortarifabio.desafiofirebase.utils.Constants.Intent.INTENT_GAME_KEY
 
 class GamesDetailsActivity : AppCompatActivity() {
@@ -16,6 +18,10 @@ class GamesDetailsActivity : AppCompatActivity() {
     private var game: Game? = null
     private val storageRef by lazy {
         Firebase.storage.reference
+    }
+
+    private val analytics by lazy {
+        Firebase.analytics
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,6 +53,7 @@ class GamesDetailsActivity : AppCompatActivity() {
             finish()
         }
         btGamesDetailsEdit.setOnClickListener {
+            analytics.logEvent(ANALYTICS_UPDATE_GAME_EVENT, null)
             val intent = Intent(this@GamesDetailsActivity, GamesRegisterActivity::class.java)
             intent.putExtra(INTENT_GAME_KEY, game)
             startActivity(intent)

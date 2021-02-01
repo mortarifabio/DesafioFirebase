@@ -74,7 +74,7 @@ class AuthenticationBusiness(
         }
     }
 
-    private suspend fun saveUser(user: User): AuthenticationResponse? {
+    private suspend fun saveUser(user: User): AuthenticationResponse {
         return if(repository.saveUser(user)) {
             AuthenticationResponse.Success(null, user)
         }else{

@@ -8,7 +8,6 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
-import com.google.firebase.storage.ktx.storageMetadata
 import com.mortarifabio.desafiofirebase.R
 import com.mortarifabio.desafiofirebase.extensions.toHashMap
 import com.mortarifabio.desafiofirebase.model.Game
@@ -18,7 +17,6 @@ import com.mortarifabio.desafiofirebase.utils.Constants.Firestore.FIRESTORE_LOG_
 import com.mortarifabio.desafiofirebase.utils.Constants.Firestore.FIRESTORE_PAGE_SIZE
 import com.mortarifabio.desafiofirebase.utils.Constants.Storage.STORAGE_LOG_KEY
 import kotlinx.coroutines.tasks.await
-import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStream
@@ -61,9 +59,6 @@ class GamesRepository (
 
     private suspend fun saveImage(bitmap: Bitmap?, uid: String, imgPath: String?): String? {
         return try {
-//            val baos = ByteArrayOutputStream()
-//            bitmap?.compress(Bitmap.CompressFormat.JPEG, 60, baos)
-//            val data = baos.toByteArray()
             bitmap?.let {
                 val file = bitmapToFile(bitmap)
                 val fileUri = Uri.fromFile(file)
@@ -101,8 +96,7 @@ class GamesRepository (
     }
 
     private fun bitmapToFile(bitmap: Bitmap): File? {
-        val filesDir = context.filesDir;
-        val imageFile = File(filesDir, "tempImage.jpg")
+        val imageFile = File(context.filesDir, "tempImage.jpg")
         val outputStream: OutputStream
         return try {
             outputStream = FileOutputStream(imageFile)

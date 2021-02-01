@@ -9,7 +9,6 @@
     <color name="lighter_gray">#FFDDDDDD</color>
     <color name="light_gray">#FFC0CCDA</color>
     <color name="gray">#FF8492A6</color>
-    <color name="light_black">#FF47525E</color>
     <color name="medium_black">#FF1F2D3D</color>
     <color name="black">#FF000000</color>
 </resources>

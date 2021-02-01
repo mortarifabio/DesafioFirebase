@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.analytics.ktx.analytics
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.ktx.storage
 import com.mortarifabio.desafiofirebase.GlideApp
@@ -11,6 +12,7 @@ import com.mortarifabio.desafiofirebase.R
 import com.mortarifabio.desafiofirebase.databinding.ItemGamesListBinding
 import com.mortarifabio.desafiofirebase.model.Game
 import com.mortarifabio.desafiofirebase.model.Game.Companion.DIFF_CALLBACK
+import com.mortarifabio.desafiofirebase.utils.Constants.Analytics.ANALYTICS_GAME_DETAILS_EVENT
 
 class GamesListAdapter(
     private val onItemClicked: (Game?) -> Unit
@@ -35,6 +37,9 @@ class GamesListAdapter(
         private val storageRef by lazy {
             Firebase.storage.reference
         }
+        private val analytics by lazy {
+            Firebase.analytics
+        }
         fun bind(game: Game?, onItemClicked: (Game?) -> Unit) = with(binding) {
             game?.let {
                 val imgRef = it.image?.let { image ->storageRef.child(image) }
@@ -46,6 +51,7 @@ class GamesListAdapter(
                 tvGamesListName.text = it.name
                 tvGamesListYear.text = it.createdAt
                 cvGamesListCard.setOnClickListener {
+                    analytics.logEvent(ANALYTICS_GAME_DETAILS_EVENT, null)
                     onItemClicked(game)
                 }
             }
