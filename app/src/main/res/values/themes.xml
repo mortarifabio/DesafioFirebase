@@ -187,6 +187,7 @@
         <item name="android:layout_marginTop">@dimen/margin_default</item>
         <item name="android:layout_marginEnd">@dimen/margin_default</item>
         <item name="android:layout_marginStart">@dimen/margin_default</item>
+        <item name="android:layout_marginBottom">@dimen/margin_double</item>
         <item name="android:textSize">@dimen/games_details_description_size</item>
         <item name="android:textColor">@color/gray</item>
     </style>
