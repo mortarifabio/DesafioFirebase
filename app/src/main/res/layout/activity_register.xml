@@ -79,7 +79,8 @@
                     style="@style/TextInputLayoutDefault"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/password">
+                    android:hint="@string/password"
+                    app:passwordToggleEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/tietRegisterPassword"
@@ -95,7 +96,8 @@
                     style="@style/TextInputLayoutDefault"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/repeat_password">
+                    android:hint="@string/repeat_password"
+                    app:passwordToggleEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/tietRegisterRepeatPassword"

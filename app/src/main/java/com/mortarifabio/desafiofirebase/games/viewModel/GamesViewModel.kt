@@ -31,9 +31,9 @@ class GamesViewModel(application: Application) : AndroidViewModel(application) {
         getGames()
     }
 
-    fun saveGame(binding: ActivityGamesRegisterBinding, gameId: String?, bitmap: Bitmap?) {
+    fun saveGame(binding: ActivityGamesRegisterBinding, game: Game?, bitmap: Bitmap?) {
         viewModelScope.launch {
-           saveLiveData.postValue(business.saveGame(binding, gameId, bitmap))
+           saveLiveData.postValue(business.saveGame(binding, game, bitmap))
         }
     }
 

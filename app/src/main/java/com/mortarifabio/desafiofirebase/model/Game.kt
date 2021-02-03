@@ -6,10 +6,10 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Game(
-    val id: String? = null,
-    val name: String,
-    val createdAt: String,
-    val description: String,
+    var id: String? = null,
+    var name: String,
+    var createdAt: String,
+    var description: String,
     var image: String? = null
 ) : Parcelable {
     companion object {

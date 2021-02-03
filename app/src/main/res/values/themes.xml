@@ -142,6 +142,7 @@
     </style>
 
     <style name="GamesRegisterImage">
+        <item name="android:layout_marginTop">@dimen/margin_default</item>
         <item name="android:background">@drawable/games_register_img_bg</item>
         <item name="android:padding">@dimen/games_register_image_stroke_width</item>
         <item name="android:src">@drawable/img_camera</item>

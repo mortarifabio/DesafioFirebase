@@ -34,15 +34,21 @@ class GamesRepository (
         Firebase.storage.reference
     }
 
-    suspend fun saveGame(game: Game, gameId: String?, bitmap: Bitmap?) : Boolean {
+    suspend fun saveGame(game: Game, bitmap: Bitmap?) : Boolean {
         return try {
             auth.currentUser?.uid?.let {
+                game.image?.let { image ->
+                    storageRef.child(image)
+                        .delete()
+                        .await()
+                    game.image = null
+                }
                 game.image = saveImage(bitmap, it, game.image)
                 val gameData = game.toHashMap()
                 val collectionRef = db.collection(FIRESTORE_COLLECTION_USERS)
                     .document(it)
                     .collection(FIRESTORE_COLLECTION_USER_GAMES)
-                val documentRef = gameId?.let { id ->
+                val documentRef = game.id?.let { id ->
                     collectionRef.document(id)
                 } ?: collectionRef.document()
                 documentRef.set(gameData)

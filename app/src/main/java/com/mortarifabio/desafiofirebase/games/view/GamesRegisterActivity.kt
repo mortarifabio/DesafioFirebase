@@ -102,7 +102,7 @@ class GamesRegisterActivity : AppCompatActivity() {
             finish()
         }
         btGamesRegisterSave.setOnClickListener {
-            viewModel.saveGame(binding, game?.id, bitmap)
+            viewModel.saveGame(binding, game, bitmap)
         }
         viewModel.saveLiveData.observe(this@GamesRegisterActivity) {
             if (it) {

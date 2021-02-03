@@ -12,12 +12,14 @@ class GamesBusiness(
         GamesRepository(context)
     }
 
-    suspend fun saveGame(binding: ActivityGamesRegisterBinding, gameId: String?, bitmap: Bitmap?): Boolean {
-        val game = Game(
+    suspend fun saveGame(binding: ActivityGamesRegisterBinding, game: Game?, bitmap: Bitmap?): Boolean {
+        val gameUpdated = Game(
+            id = game?.id,
             name = binding.tietGamesRegisterName.text.toString(),
             createdAt = binding.tietGamesRegisterCreatedAt.text.toString(),
-            description = binding.tietGamesRegisterDescription.text.toString()
+            description = binding.tietGamesRegisterDescription.text.toString(),
+            image = game?.image
         )
-        return repository.saveGame(game, gameId, bitmap)
+        return repository.saveGame(gameUpdated, bitmap)
     }
 }
